@@ -1,333 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SpicyFoods</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+#navebar{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding:.5rem 5rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, 0.644);
+}
+#navbarSupportedContent{
+    border-bottom: 2px solid transparent;
 
-    <!--Navebar-->
+}
+#navbarSupportedContent a:hover{
+    border-bottom: 2px solid yellow;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    <nav class="navbar navbar-expand-lg navbar-light" id="navebar">
-        <div class="container-fluid">
-          <a class="navbar-brand text-warning fs-4" href="#">SPICES</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"aria-expanded="false" >
-            <span class="navbar-toggler-icon bg-white"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a id="navhome" class="nav-link text-white" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a id="navabout" class="nav-link text-white" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a id="navproduct" class="nav-link text-white" href="#products">Products</a>
-              </li>
-              <li class="nav-item">
-                <a id="navcontact" class="nav-link text-white" href="#contact">Contact</a>
-              </li>
-              </ul>
-              <button id="signupbutton" class="btn bg-warning border rounded p-2 my-lg-0 my-2">Sign In</button>
-        </div>
-      </nav>
-
-      <div class="breakdiv px-2">
-        <a href="https://instagram.com/_________jinn__________?utm_medium=copy_link"><img class="log" src="https://img.icons8.com/wired/64/000000/instagram-new--v2.png"/></a>
-        <a href="https://www.facebook.com/"><img class="log" src="https://img.icons8.com/wired/64/000000/facebook-new.png"/></a>
-        <a href="https://www.youtube.com/"><img class="log"  src="https://img.icons8.com/wired/64/000000/youtube--v1.png"/></a>
-        <br>
-      </div>
+/******Home*****/
 
 
-      <!--Home-->
+#home{
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.4)), url(https://images.unsplash.com/photo-1555178897-59f4cdf2427d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80);
+    background-size: cover;
+    background-position: center;
+    flex-direction: column;
+    background-attachment: fixed;
+}
+#home h1{
+    font-size: 70px;
+    text-shadow: 0px 1px 0px rgb(230, 182, 27),
+                 0px 2px 0px rgb(0, 0, 0),
+                 0px 3px 0px rgb(0, 0, 0),
+                 0px 4px 0px rgb(0, 0, 0),
+                 0px 5px 0px rgb(0, 0, 0),
+                 0px 6px 0px rgb(0, 0, 0),
+                 0px 7px 0px rgb(0, 0, 0);
+}
+#home .input-group{
+    width: 40%;
+    height: 45px;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+}
+#email{
+    background-color: rgba(0, 0, 0, 0.61);
+}
+#getstartbutton{
+    background-color: rgba(255, 255, 0, 0.671);
+}
+#getstartbutton:hover{
+    background-color: rgb(255, 255, 0);
+}
+#paragraph{
+    font-size: 25px;
+}
 
-      <section id="home">
-            <h1 id="organicspices" class="text-white text-center">ORGANIC SPICES</h1>
-          <p  class="text-white fw-bold" id="paragraph">Varity's the very spice of life, That gives it all its flavor</p>
-          <div class="input-group m-4">
-              <input id="inputmail" type="text" class="form-control" placeholder="Email Address">
-              <button id="emailbutton" class="btn signin bg-warning text-white">Get Started</button>
-          </div>
-      </section>
-
-      <!--About-->
-
-      <section id="about" class="">
-          <div class="container-fluid">
-              <div class="row">
-                  <div class="col-lg-6 col-md-6 col-12 my-2">
-                    <img id="aboutimage" src="https://keralaspices.store/wp-content/uploads/2020/08/Webp.net-resizeimage-6.png">
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-12 p-lg-5 p-2 my-5" id="aboutusbackground">
-                    <h1 class="text-white fw-bold">ABOUT US</h1>
-                    <p class="text-white">
-                        keralaspicesOnline.com is a first of its kind spice e-store conceived by a team of management professionals                         with decades of domain knowledge. Also passion for promoting healthy and qualitative spices – the natural and                       traditional way is the driving force behind this venture.
-
-                        Keralaspicesonline.com is India’s first online spices supermarket store. With over 25 major types of spices                         which are using to cook, you will find everything you are looking for as the taste maker. Choose from a wide                        range of options in spices, exclusively handpicked to help you find the best quality available at the lowest                    prices. It is from land of spices like, Udumbumchola Taluk and Peermadu Taluk of Idukki district of Kerala.                     Kumily, Vandanmedu, Thekkady, Munnar and Kattappana are the major places of spice production in Kerala .
-
-                        Kerala spices online is an online seller for high quality spices like cardamom, Pepper, Nutmeg, Clove,tea,                      coffee etc. Here you will be able to buy export quality spices at low prices as collected directly from the                     farmers at Kumily(Thekkady) , Kattappana, and Nedumkandam which are the land of spices. Here we offer all                   kinds of masalas that can add taste to your favorite dishes and food. We guarantee on time delivery and the                     best quality because we are from land of spices in Kerala!
-
-                        <h4 class="text-white">OUR SPECIALTIES.</h4>
-                        <li class="text-white">
-                        Low price and High Quality
-                        </li>
-                        <li class="text-white">
-                        International Delivery.
-                        </li>
-                        <li class="text-white">
-                        Timely delivery
-                        </li>
-                    </p>
-                  </div>
-              </div>
-          </div>
-      </section>
-
-
-      <!--Products-->
-
-
-      <section id="products" class="">
-        <div class="container">
-            <br>
-            <div class="zoom">
-                <h1 id="ourproduct" class="text-center my-5 text-warning fw-bold">OUR PRODUCTS</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img id="img" src="https://cdn.shopaccino.com/refresh/articles/turmeric2-901357_l.jpg" class="card-img-top" alt="Turmeric Powder">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Turmeric Powder</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img src="https://www.idukkivalley.com/wp-content/uploads/2017/07/shutterstock-793118710.png" class="card-img-top" alt="Pepper">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Pepper</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img src="https://opt.toiimg.com/recuperator/img/toi/m-63530654/63530654.jpg&width=500&resizemode=4" class="card-img-top" alt="chillie">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Chillie</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img id="img" src="http://photos1.blogger.com/blogger/308/2363/1600/saunf.jpg" class="Aniseeds, fennel seeds" alt="Turmeric Powder">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Aniseeds, fennel seeds</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img src="https://t3.ftcdn.net/jpg/01/76/37/74/360_F_176377482_kDBF4IamTFxqU98CK1Fs2KN4YE9BT0b3.jpg" class="card-img-top" alt="Asafoetida">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Asafoetida</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img src="https://i.etsystatic.com/20504041/r/il/af141a/1956690676/il_fullxfull.1956690676_d3u1.jpg" class="card-img-top" alt="Indian Bay Leaf">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Card title</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img id="img" src="https://media.istockphoto.com/photos/mustard-powder-in-spoon-with-flower-on-board-top-picture-id1021502940?k=20&m=1021502940&s=612x612&w=0&h=SW_Ckr9Uj6bqI3XtZbDsPhNBxXSjw37-Yr0WkRlC3Aw=" class="card-img-top" alt="Big mustard seeds">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Big mustard seeds</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img src="https://img1.exportersindia.com/product_images/bc-full/2021/2/7947332/cardamom-powder-1612264859-5710594.jpeg" class="card-img-top" alt="Turmeric Powder">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Black cardamom</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-12">
-                    <div class="card bg-dark border-0 img-hover-zoom">
-                        <img src="https://post.healthline.com/wp-content/uploads/2020/09/kalonji-nigella-seeds-thumb.jpg" class="card-img-top" alt="Turmeric Powder">
-                        <div class="card-body text-center">
-                          <h5 class="card-title text-white">Black cumin seeds</h5>
-                          <a href="#" class="btn btn-warning">Add to Cart</a>
-                        </div>
-                      </div>
-                      <div class=" expandbutton">
-                        <button class="btn btn-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
-                            More
-                        </button>
-                      </div>
-                </div>
-                
-            </div>
-        </div>
-      </section>
-
-
-
-        <!--Expanding-->
-
-        </div>
-      <div >
-        <div class="collapse collapse-horizontal" id="collapseWidthExample">
-            <section id="products" class="bg-dark">
-                <div class="container">
-                    <br>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img id="img" src="https://cdn.shopaccino.com/refresh/articles/turmeric2-901357_l.jpg" class="card-img-top" alt="Turmeric Powder">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Turmeric Powder</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img src="https://www.idukkivalley.com/wp-content/uploads/2017/07/shutterstock-793118710.png" class="card-img-top" alt="Pepper">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Pepper</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img src="https://opt.toiimg.com/recuperator/img/toi/m-63530654/63530654.jpg&width=500&resizemode=4" class="card-img-top" alt="chillie">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Chillie</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img id="img" src="http://photos1.blogger.com/blogger/308/2363/1600/saunf.jpg" class="Aniseeds, fennel seeds" alt="Turmeric Powder">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Aniseeds, fennel seeds</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img src="https://t3.ftcdn.net/jpg/01/76/37/74/360_F_176377482_kDBF4IamTFxqU98CK1Fs2KN4YE9BT0b3.jpg" class="card-img-top" alt="Asafoetida">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Asafoetida</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img src="https://i.etsystatic.com/20504041/r/il/af141a/1956690676/il_fullxfull.1956690676_d3u1.jpg" class="card-img-top" alt="Indian Bay Leaf">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Card title</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img id="img" src="https://media.istockphoto.com/photos/mustard-powder-in-spoon-with-flower-on-board-top-picture-id1021502940?k=20&m=1021502940&s=612x612&w=0&h=SW_Ckr9Uj6bqI3XtZbDsPhNBxXSjw37-Yr0WkRlC3Aw=" class="card-img-top" alt="Big mustard seeds">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Big mustard seeds</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img src="https://img1.exportersindia.com/product_images/bc-full/2021/2/7947332/cardamom-powder-1612264859-5710594.jpeg" class="card-img-top" alt="Turmeric Powder">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Black cardamom</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-12">
-                            <div class="card bg-dark border-0 img-hover-zoom">
-                                <img src="https://post.healthline.com/wp-content/uploads/2020/09/kalonji-nigella-seeds-thumb.jpg" class="card-img-top" alt="Turmeric Powder">
-                                <div class="card-body text-center">
-                                  <h5 class="card-title text-white">Black cumin seeds</h5>
-                                  <a href="#" class="btn btn-warning">Add to Cart</a>
-                                </div>
-                              </div>
-                        </div>
-                    </div>
-                </div>
-              </section>
-          
-        </div>
-      </div>
-
-
-     
-
-              
-
-      <!--Contact-->
-
-      <section id="contact">
-          <div class="container box">
-              <div class="row">
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <h1 class="text-white">CONTACT US</h1>
-                    <form class="pt-5">
-                        <input id="aboutbox" type="text" class="form-control" placeholder="Enter Your Name">
-                        <input id="aboutbox" type="text" class="form-control" placeholder="Enter Your Email">
-                        <textarea id="aboutbox" class="form-control h-50" placeholder="Enter Your Message"></textarea>
-                        <button  class="btn btn-success">Send Message</button>
-                    </form>
-                  </div>
-              </div>
-          </div>
-      </section>
+#products img{
+    width: 260px;
+    height: 200px;
     
+}
 
-      <footer class=" bg-dark text-black text-center">
-          Copyright @jinn 2022
-      </footer>
+.card{
+    width: 260px;
+    height: 300px;
+    box-shadow: 13px 18px 18px rgba(0,0,0.3);
+    border-bottom-right-radius: 25px !important;
+    border-bottom-left-radius: 25px !important;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 60px;
+                
+}
+#about{
+    /*background-color: rgba(255, 166, 0, 0.781);*/
+    background-image: url(https://images.unsplash.com/photo-1587858588560-77c97762d0de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1536&q=80);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#products{
+    background-image: url(https://images.unsplash.com/photo-1600381934582-a3655589887d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+.expandbutton{
+    display: flex;
+    justify-content:end ;
+    margin-right: 0;
+}
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" ></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" ></script>
-</body>
-</html>
+/**Contact**/
+
+#contact img{
+    height: 100%;
+}
+.box{
+    width: 80% !important;
+    margin-top: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height: 25rem;
+}
+#contact input{
+    margin: 10px 0px;
+}
+#contact textarea{
+    margin: 10px 0px;
+}
+footer{
+    width: 100%;
+}
+
+/* [1] The container */
+.img-hover-zoom {
+    height: 300px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+  
+  /* [2] Transition property for smooth transformation of images */
+  .img-hover-zoom img {
+    transition: transform .5s ease;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .img-hover-zoom:hover img {
+    transform: scale(1.2);
+  }
+
+  /* [1] The container */
+.zoom {
+    height: 150px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+  
+  /* [2] Transition property for smooth transformation of images */
+  .zoom #ourproduct {
+    transition: transform .5s ease;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  .zoom:hover #ourproduct {
+    transform: scale(1.2);
+  }
+
+
+  #home {
+    height: 100px; /* [1.1] Set it as per your need */
+    overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+  }
+  
+  /* [2] Transition property for smooth transformation of images */
+  #home #organicspices {
+    transition: transform .5s ease;
+  }
+  
+  /* [3] Finally, transforming the image when container gets hovered */
+  #home:hover #organicspices {
+    transform: scale(1.2);
+  }
+
+#aboutusbackground{
+    background-color: rgba(0, 0, 0, 0.685);
+    border-radius: 20px;
+}
+#carouselimage{
+    height:600px;
+    width:100%;
+}
+#aboutbox{
+    background-color: rgba(0, 0, 0, 0.678);
+}
+
+  #contact{
+      background:linear-gradient(rgba(0, 0, 0, 0.562),rgba(0, 0, 0, 0.637)),url(https://images.unsplash.com/photo-1596040033229-a9821ebd058d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+  }
+
+
+  
+  
